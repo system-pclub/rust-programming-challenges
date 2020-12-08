@@ -13,7 +13,7 @@ async fn main() -> Result<(), Error> {
         tokio_postgres::connect("host=localhost user=postgres", NoTls).await?;
 
     let trans = client.transaction().await.unwrap();
-    tx_work(&trans).await;
+    tx_work(&trans).await.unwrap();
 
     Ok(())
 }
