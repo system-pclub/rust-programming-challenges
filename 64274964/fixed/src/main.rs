@@ -1,5 +1,5 @@
 // To make the code compilable while keeping the functionality of two threads
-// modify the image in parallel, raw pointer operation is needed, besides moving
+// modifying the image in parallel, raw pointer operation is needed, besides moving
 // ImageView out of the closure.
 
 use rayon;
