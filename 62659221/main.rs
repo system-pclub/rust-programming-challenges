@@ -13,4 +13,9 @@ impl Container {
     }
 }
 
+fn convert<'v1, 'v2>(x: &'v1 Container, env: &'v2 Container) {
+    let root: Value<'v2> = env.get();
+    x.set(root);
+}
+
 fn main() {}
