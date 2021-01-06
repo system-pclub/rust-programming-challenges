@@ -2,36 +2,28 @@
 #![allow(dead_code)]
 
 use std::fs::File;
-use std::io::{BufReader, BufRead, Error};
+use std::io::{BufReader, BufRead};
 use std::string::String;
 
-
-struct MyError {
-    str: String,
+struct Args {
+    path: String,
+    pattern: String
 }
 
-impl From<std::io::Error> for MyError {
-    fn from(err: Error) -> Self {
-        MyError { str: err.to_string() }
-    }
-}
-
-fn open(args: &str) -> Result<i32, MyError> {
-    let file = File::open(args)?;
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let args = Args {
+        path: "path".to_string(),
+        pattern: "pattern".to_string()
+    };
+    let file = File::open(&args.path)?;
     let reader = BufReader::new(file);
 
     for line in reader.lines() {  // line 1
-        let line1 = line?;  //line 3
-        if line1.contains(&args) {
-            println!("{}", line1);
+        let line = line?;
+        if line.contains(&args.pattern) { //line 2
+            println!("{}", line);  
         }
     }
 
-    Ok(0)
-}
-
-
-fn main() {
-    let a = "path";
-    let res = open(a);
+    Ok(())
 }
