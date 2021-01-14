@@ -1,4 +1,4 @@
 *.exe
 *.pdb
-./tmp.rs
+tmp.rs
 **/target
