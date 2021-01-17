@@ -2,3 +2,4 @@
 *.pdb
 tmp.rs
 **/target
+/tmp
