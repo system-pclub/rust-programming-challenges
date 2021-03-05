@@ -14,9 +14,8 @@ mod case2 {
     fn f4() {
         let foo = Foo {};
         let mut bar2 = Bar2 { x: &foo };
-        bar2.f(); // (3) 'bar2' is borrowed as mutable, but who borrowed it?
-        let z = bar2.f(); // error: cannot borrow `bar2` as mutable more than once 
-                          // at a time [E0499]
+        bar2.f(); 
+        let _z = bar2.f();
     }
 }
 
