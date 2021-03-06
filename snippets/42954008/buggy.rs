@@ -1,7 +1,7 @@
 fn main() {
     let my_array = vec![61, 14, 71, 23, 42, 8, 13, 66];
     let max = max(my_array);
-    let min = min(my_array);
+    let _min = min(my_array);
     println!("Max value is {}.", max);
 }
 

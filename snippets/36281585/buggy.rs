@@ -21,9 +21,9 @@ struct Graph {
 
 impl Graph {
     fn mutate(&mut self) {
-        for (key, value) in self.nodes.iter() {
+        for (key, _value) in self.nodes.iter() {
             if self.edges.contains_key(key) {
-                for (target, weight) in self.edges[key].iter() {
+                for (target, _weight) in self.edges[key].iter() {
                     self.nodes.entry(*target).or_insert(Node::new()).weight;
                 }
             }
