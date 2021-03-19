@@ -1,7 +1,5 @@
 // no compilation errror
 
-use core::ops::Deref;
-
 #[derive(Debug)]
 struct A<'b, 'c, T> {
     child_b: &'b T,
