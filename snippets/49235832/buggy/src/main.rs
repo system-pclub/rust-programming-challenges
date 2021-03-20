@@ -1,7 +1,7 @@
-use futures::{future, stream, Stream}; // 0.1.29
+use futures::{future, Stream}; // 0.1.29
 use std::time::Duration;
 use tokio; // 0.1.22
-use tokio_timer::Interval; // 0.1
+//use tokio_timer::Interval; // 0.1
 
 fn main() {
     tokio::run({
