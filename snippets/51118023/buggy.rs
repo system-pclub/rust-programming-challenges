@@ -1,6 +1,6 @@
 fn main() {
     let mut fields = Vec::new();
-    let mut pusher = |a: &str| {
+    let _pusher = |a: &str| {
         fields.push(a);
     };
 }
