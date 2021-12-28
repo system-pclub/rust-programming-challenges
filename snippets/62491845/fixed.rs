@@ -24,7 +24,7 @@ fn main() {
     };
 
     if let Some((first,rest)) = out1.a.split_first_mut() {
-        test_ownership(&mut first.in_a, &mut rest[0]);
+        test_ownership(&mut first.in_a, &rest[0]);
     }
 
     // But this works!
