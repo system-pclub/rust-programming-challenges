@@ -1,0 +1,12 @@
+[package]
+name = "buggy"
+version = "0.1.0"
+authors = ["Ryvian <31315697+Ryvian@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lapin = "1.6.1"
+async-trait = "0.1.42"
+tokio = { version = "0.3.5", features = ["full"] }
