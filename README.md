@@ -7,7 +7,7 @@ Paper:   Learning and Programming Challenges of Rust: A Mixed-Methods Study
 This document is to help users reproduce the results we reported in our submission. 
 It contains the following descriptions:
 
-## 0. Artifact Expectation
+## 1. Artifact Expectation
 
 The collected data and the scripts of our paper are released in this repository.
 The detailed study results are released in an excel file. 
@@ -19,7 +19,7 @@ and R to ease the reproduction
 of our data analytics. 
 Users can open the image with VirtualBox 6.1 or a higher VirtualBox version. 
 
-## 1. Artifact Overview
+## 2. Artifact Overview
 
 In our paper, we first empirically study Rust-related Stack Overflow questions
 to understand the programming challenges of Rust. We then conduct an online
@@ -38,14 +38,14 @@ how each number in our paper
 is supported by this artifact. 
 
 
-## 2. Studying Stack Overflow Questions (Section 3 in the paper)
+## 3. Studying Stack Overflow Questions (Section 3 in the paper)
 The detailed study results are summarized in google 
 excel [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
 All tabs mentioned in this section
 are in this google excel, unless otherwise specified. 
 
 
-### 2.1 Methodology
+### 3.1 Methodology
 File `large-dataset/raw-data.json` contains the original HTML web pages
 of the large dataset. 
 File `large-dataset/raw-data-html-tag-removed.json`
@@ -64,7 +64,7 @@ are under directory `small-dataset/reproduced-code-snippets`.
 
 
 
-## Section 3.2
+### 2.2 
 ### Section 3.2.1
 In "Empirical Table", see G:I in sheet "Section 3.2", sheet "Section 3.2.1 - Intra-procedural" and sheet "Section 3.2.1 - Inter-procedual".
 
