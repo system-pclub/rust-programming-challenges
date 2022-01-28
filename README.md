@@ -77,20 +77,17 @@ In "Empirical Table", see N:Q in sheet "Section 3.2", and sheet "Section 3.2.2 -
 ## Section 3.3
 
 ### Section 3.3.1
-For example, 204 questions contain the topic about 
-how to use lifetime annotations in a trait, 
-32 questions contain the topic about how to borrow from an iterator or a container, and and three questions are about how to use move with pattern matching:
+"We find 790, 907, and 28 questions respectively for these rule
+groups in the large dataset":
 https://docs.google.com/spreadsheets/d/1u0hVmvPmwQ6ExT1kshX_m_xuePRKZfovZFwmd7S_vKw/edit#gid=0
 
 The LDA results are presented in sheet 'Section 3.3.1 LDA-"lifetime"',
 'Section 3.3.1 LDA-"borrow"', and 'Section 3.3.1 LDA-"move"'.
 Each sheet uses topic numbers 28, 6, and 9 respectively.
 
-"For example, 415 questions contain the topic about how
-to use lifetime annotations in a struct or a trait, seven questions
-contain the topic about how to borrow elements from a collection or
-a container, and four questions are about how to move an object to a
-function or a closure."
+For example, 204 questions contain the topic about 
+how to use lifetime annotations in a trait, 
+32 questions contain the topic about how to borrow from an iterator or a container, and and three questions are about how to use move with pattern matching."
 
 See the cells marked in green. The 415 questions of lifetime annotations
 are summarized by using topic number = 8.
