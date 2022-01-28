@@ -1,8 +1,8 @@
-# The code, analysis scripts and results for ASPLOS 2022 Artifact Evaluation
+# The code, analysis scripts and results for ICSE 2022 Artifact Evaluation
 
 Version: 1.1\
 Update:  Jan 28, 2022\
-Paper:   Learning and Programming Challenges of Rust: A Mixed-Methods Study
+Paper:   Learning and Programming Challenges of Rust: A Mixed-Methods Study (#1162)
 
 This document is to help users reproduce the results we reported in our submission. 
 It contains the following descriptions:
@@ -10,10 +10,10 @@ It contains the following descriptions:
 ## 1. Artifact Expectation
 
 The collected data and the scripts to analyze the data are released in this repository.
-The detailed study results are released in a Google excel file. 
+The detailed study results are released in a Excel document. 
 Our scripts are implemented either in Python or in R. 
-All Python scripts can be exercised by Python-3.6 or a higher version. 
-All R scripts can be exercised by R-3.6 or a higher version.
+All Python scripts can be executed by Python 3.6 or a higher version. 
+All R scripts can be executed by R 3.6 or a higher version.
 We also prepare a VM image with pre-installed Python 
 and R to ease the reproduction
 of our data analytics. 
@@ -39,10 +39,13 @@ is supported by this artifact.
 
 
 ## 3. Studying Stack Overflow Questions (Section 3 of the paper)
-The detailed study results are summarized in Google 
-excel [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
+The detailed study results are summarized in the Excel document located in
+TODO of this repository.
+
+[empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
+
 All tabs mentioned in this section
-are in this Google excel, unless otherwise specified. 
+are in this document, unless otherwise specified. 
 
 
 ### 3.1 Methodology
@@ -62,24 +65,35 @@ are saved in file `small-dataset/question-web-pages`.
 The code snippets to reproduce compiler errors 
 are under directory `small-dataset/reproduced-code-snippets`.
 
+### Section 3.2.1 Complex Lifetime Computation
+There are three categories of complex lifetime computations: Intra-procedural Lifetime Computation, Inter-procedural Lifetime Computation, Simple Syntax Errors.
+The information of which category each violation belongs to is listed in Columns G--I of tab Section#3.2.
+Tab Section#3.2.1-Intra-procedural shows the detailed sub-categories of violations under Intra-procedural Lifetime Computation.
+Tab Section#3.2.1-Inter-procedual shows the detailed sub-categories of violations under Inter-procedural Lifetime Computation.
 
 
-### 2.2 
-### Section 3.2.1
-In "Empirical Table", see G:I in sheet "Section 3.2", sheet "Section 3.2.1 - Intra-procedural" and sheet "Section 3.2.1 - Inter-procedual".
+### Section 3.2.2 Violating Ownership Rules
+There are two categories of ownership violations, Move Rule Violations and Borrowing Rule Violations.
+The information of which category each violation belongs to is listed in Columns K--L of tab Section#3.2.
+Tab Section#3.2.2-Move shows the detailed sub-categories of violations belonging to Move Rule Violations.
+Tab Section#3.2.2-Borrow shows the detailed sub-categories of violations belonging to Borrowing Rule Violations.
 
-### Section 3.2.2
-In "Empirical Table", see K:L in sheet "Section 3.2", and sheet "Section 3.2.2 - Move Rule".
 
-### Section 3.2.3
-In "Empirical Table", see N:Q in sheet "Section 3.2", and sheet "Section 3.2.2 - Borrowing Rule".
+### Section 3.2.3 How Violations are Fixed? 
+The category of how each violation is fixed is listed in Columns N--Q.
 
-## Section 3.3
+## Section 3.3 When a Safety Rule is More Confusing?
+In this section, we applied the LDA model to identify potential situations where a safety rule is more confusing.
+With the help of the LDA model, we identified the involved code constructs in the violations.
+They are listed in tab Section#3.3.
 
-### Section 3.3.1
-"We find 790, 907, and 28 questions respectively for these rule
-groups in the large dataset":
-https://docs.google.com/spreadsheets/d/1u0hVmvPmwQ6ExT1kshX_m_xuePRKZfovZFwmd7S_vKw/edit#gid=0
+We then computed the lift metric on these code constructs and violations. The details of the LDA model and the lift metric
+are listed below.
+
+### Section 3.3.1  LDA Model
+We first identify Stack Overflow questions with their tags. 
+Results in line 554 and 555 are listed in tab Section#3.3-tag-count.
+Tags of different groups are highlighted with different colors, which are indicated in column D.
 
 The LDA results are presented in sheet 'Section 3.3.1 LDA-"lifetime"',
 'Section 3.3.1 LDA-"borrow"', and 'Section 3.3.1 LDA-"move"'.
