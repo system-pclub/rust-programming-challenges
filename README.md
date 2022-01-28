@@ -54,12 +54,12 @@ contains the version where HTML tags are removed.
 The information of the sampled 100 Rust-related questions in Section 3.1.1 of the paper 
 is in tab Section#3.1.1.
 
-The information of the sampled 100 question of the small 
+The information of the sampled 100 questions of the small 
 dataset (Section 3.1.2 in the paper)
 is in Columns B-E of tab Section#3.2.
-The original web pages of the questions in the samll dataset
+The original web pages of the questions
 are saved in file `small-dataset/question-web-pages`. 
-The code snippets to reproduce all compiler errors 
+The code snippets to reproduce compiler errors 
 are under directory `small-dataset/reproduced-code-snippets`.
 
 
