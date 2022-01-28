@@ -77,8 +77,9 @@ In "Empirical Table", see N:Q in sheet "Section 3.2", and sheet "Section 3.2.2 -
 ## Section 3.3
 
 ### Section 3.3.1
-"We find 790, 907, and 28 questions respectively for these rule
-groups in the large dataset":
+For example, 204 questions contain the topic about 
+how to use lifetime annotations in a trait, 
+32 questions contain the topic about how to borrow from an iterator or a container, and and three questions are about how to use move with pattern matching:
 https://docs.google.com/spreadsheets/d/1u0hVmvPmwQ6ExT1kshX_m_xuePRKZfovZFwmd7S_vKw/edit#gid=0
 
 The LDA results are presented in sheet 'Section 3.3.1 LDA-"lifetime"',
