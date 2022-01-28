@@ -38,35 +38,30 @@ how each number in our paper
 is supported by this artifact. 
 
 
-## 2. Section 3
-The empirical study results is presented in the google document below:
-https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057
-
-We call this document as "Empirical Table" in the rest of the document.
-
-## Section 3.1
-### The large dataset
-Original web page content:
-`icse2022-ae20/large-dataset/raw-data.json`
-
-After removing HTML tags:
-`icse2022-ae20/large-dataset/raw-data-html-tag-removed.json`
-#### The sample 100 questions and results from the large dataset
-See sheet "Section 3.1.1 sampled 100 questions" in the empirical table.
-
-### The small dataset
-Copy of the original web pages:
-`icse2022-ae20/small-dataset/question-web-pages`
-
-Reproduced Rust code snippets:
-
-`icse2022-ae20/small-dataset/reproduced-code-snippets`
+## 2. Studying Stack Overflow Questions (Section 3 in the paper)
+The detailed study results are summarized in google 
+excel [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
+All tabs mentioned in this section
+are in this google excel, unless otherwise specified. 
 
 
+### 2.1 Methodology
+File `large-dataset/raw-data.json` contains the original HTML web pages
+of the large dataset. 
+File `large-dataset/raw-data-html-tag-removed.json`
+contains the version where HTML tags are removed.
 
-Violation count in Section 3.1.2:
+The information of the sampled 100 Rust-related questions (Section 3.1.1 in the paper) 
+is in tab Section#3.1.1.
 
-See D126:E134 in sheet "Section 3.2" of "Empirical Table".
+The information of the sampled 100 question for the small 
+dataset (Section 3.1.2 in the paper)
+is in Columns B-E of tab Section#3.2.
+The original web pages of the questions in the samll dataset
+are save in file `small-dataset/question-web-pages`. 
+The code snippets to reproduce all compiler errors 
+are under directory `small-dataset/reproduced-code-snippets`.
+
 
 
 ## Section 3.2
