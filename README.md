@@ -9,12 +9,12 @@ It contains the following descriptions:
 
 ## 1. Artifact Expectation
 
-The collected data and the scripts of our paper are released in this repository.
-The detailed study results are released in an excel file. 
+The collected data and the scripts to analyze the data are released in this repository.
+The detailed study results are released in a Google excel file. 
 Our scripts are implemented either in Python or in R. 
 All Python scripts can be exercised by Python-3.6 or a higher version. 
 All R scripts can be exercised by R-3.6 or a higher version.
-We also prepare a virtual machine image with pre-installed Python 
+We also prepare a VM image with pre-installed Python 
 and R to ease the reproduction
 of our data analytics. 
 Users can open the image with VirtualBox 6.1 or a higher VirtualBox version. 
@@ -29,7 +29,7 @@ For artifact evaluation, we release
 - (1) our submitted paper,
 - (2) collected Stack Overflow questions and their detailed labels,
 - (3) our designed survey, 
-- (4) survey answers from real-world Rust programmers,
+- (4) survey answers of real-world Rust programmers,
 - (5) scripts that conduct statistical analysis, 
 - and (6) intermediate analysis results.  
 
@@ -39,26 +39,26 @@ is supported by this artifact.
 
 
 ## 3. Studying Stack Overflow Questions (Section 3 in the paper)
-The detailed study results are summarized in google 
+The detailed study results are summarized in Google 
 excel [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
 All tabs mentioned in this section
-are in this google excel, unless otherwise specified. 
+are in this Google excel, unless otherwise specified. 
 
 
 ### 3.1 Methodology
 File `large-dataset/raw-data.json` contains the original HTML web pages
-of the large dataset. 
+of the questions in the large dataset. 
 File `large-dataset/raw-data-html-tag-removed.json`
 contains the version where HTML tags are removed.
 
-The information of the sampled 100 Rust-related questions (Section 3.1.1 in the paper) 
+The information of the sampled 100 Rust-related questions in Section 3.1.1 of the paper 
 is in tab Section#3.1.1.
 
-The information of the sampled 100 question for the small 
+The information of the sampled 100 question of the small 
 dataset (Section 3.1.2 in the paper)
 is in Columns B-E of tab Section#3.2.
 The original web pages of the questions in the samll dataset
-are save in file `small-dataset/question-web-pages`. 
+are saved in file `small-dataset/question-web-pages`. 
 The code snippets to reproduce all compiler errors 
 are under directory `small-dataset/reproduced-code-snippets`.
 
