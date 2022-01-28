@@ -1,6 +1,44 @@
-# ICSE2022 Artifact Evaluation #20
+# The code, analysis scripts and results for ASPLOS 2022 Artifact Evaluation
 
-# Section 3
+Version: 1.1\
+Update:  Jan 28, 2022\
+Paper:   Learning and Programming Challenges of Rust: A Mixed-Methods Study
+
+This document is to help users reproduce the results we reported in our submission. 
+It contains the following descriptions:
+
+## 0. Artifact Expectation
+
+The collected data and the scripts of our paper are released in this repository.
+The detailed study results are released in an excel file. 
+Our scripts are implemented either in Python or in R. 
+All Python scripts can be exercised by Python-3.6 or a higher version. 
+All R scripts can be exercised by R-3.6 or a higher version.
+We also prepare a virtual machine image with pre-installed Python 
+and R to ease the reproduction
+of our data analytics. 
+Users can open the image with VirtualBox 6.1 or a higher VirtualBox version. 
+
+## 1. Artifact Overview
+
+In our paper, we first empirically study Rust-related Stack Overflow questions
+to understand the programming challenges of Rust. We then conduct an online
+survey to validate the study results. 
+
+For artifact evaluation, we release 
+- (1) our submitted paper,
+- (2) collected Stack Overflow questions and their detailed labels,
+- (3) our designed survey, 
+- (4) survey answers from real-world Rust programmers,
+- (5) scripts that conduct statistical analysis, 
+- and (6) intermediate analysis results.  
+
+In the following sections, we will follow the paper content to explain 
+how each number in our paper
+is supported by this artifact. 
+
+
+## 2. Section 3
 The empirical study results is presented in the google document below:
 https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057
 
