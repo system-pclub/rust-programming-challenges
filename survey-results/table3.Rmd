@@ -1,0 +1,70 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ez)
+#from https://rdrr.io/cran/RVAideMemoire/src/R/se.R
+se <-
+function(x,y=NULL) {
+  if (is.null(y)) {
+    result <- sd(x,na.rm=TRUE)/sqrt(length(na.omit(x)))
+  } else {
+    p <- x/y
+    result <- sqrt((p*(1-p))/y)
+  }
+  return(result)
+}
+
+print_mean_sd_c = function(dat) {
+cat(mean(dat$PC.Q1.rating),',(', se(dat$PC.Q1.rating),'),',
+    mean(dat$PC.Q2..b..Please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10....1...means...very.easy....and...10...means...very.difficult....),',(', se(dat$PC.Q2..b..Please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10....1...means...very.easy....and...10...means...very.difficult....),'),', 
+    mean(dat$PC.Q3.rating),',(',se(dat$PC.Q3.rating),'),',
+    mean(dat$PC.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10..),',(',se(dat$PC.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10..),'),',
+    mean(dat$PC.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10..),',(',se(dat$PC.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10..),'),',
+    mean(dat$PC.Q6.rating),',(',se(dat$PC.Q6.rating), ')', sep="")
+}
+print_mean_sd_d = function(dat) {
+cat(mean(dat$PD.Q1.rating),',(', se(dat$PD.Q1.rating),'),',
+    mean(dat$PD.Q2..b..Please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10....1...means...very.easy....and...10...means...very.difficult....),',(', se(dat$PD.Q2..b..Please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10....1...means...very.easy....and...10...means...very.difficult....),'),', 
+    mean(dat$PD.Q3.rating),',(',se(dat$PD.Q3.rating),'),',
+    mean(dat$PD.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10..),',(',se(dat$PD.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10..),'),',
+    mean(dat$PD.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10..),',(',se(dat$PD.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10..),'),',
+    mean(dat$PD.Q6.rating),',(',se(dat$PD.Q6.rating), ')', sep="")
+}
+```
+
+
+Statistics and Tests for Q1 to Q6 in Phase 2
+======
+```{r echo=FALSE}
+dat = read.csv('../survey-responses/responses.csv')
+dat_pc = dat[dat$Which.PC.=='C1'|dat$Which.PC.=='C1_e', ]
+dat_pd = dat[dat$Which.PD.=='D1'|dat$Which.PD.=='D1_e', ]
+#erase C1_e to C1
+dat[dat$Which.PC.=='C1_e',]$Which.PC. = 'C1'
+dat$Which.PC. = factor(dat$Which.PC.)
+
+dat[dat$Which.PD.=='D1_e',]$Which.PD. = 'D1'
+dat$Which.PD. = factor(dat$Which.PD.)
+```
+
+## PC1 - PC3 and PD1 - PD3
+
+```{r echo=FALSE}
+cat("mean and sd main table:\n")
+cat("PC1 "); print_mean_sd_c(dat[dat$Which.PC.=='C1', ]); cat('\n')
+cat("PC2 "); print_mean_sd_c(dat[dat$Which.PC.=='C2', ]); cat('\n')
+cat("PC3 "); print_mean_sd_c(dat[dat$Which.PC.=='C3', ]); cat('\n')
+
+cat("PD1 ");print_mean_sd_d(dat[dat$Which.PD.=='D1', ]); cat('\n')
+cat("PD2 ");print_mean_sd_d(dat[dat$Which.PD.=='D2', ]); cat('\n')
+cat("PD3 ");print_mean_sd_d(dat[dat$Which.PD.=='D3', ]); cat('\n')
+```
+
+## PC1o, PC1e, PD1o and PD1e
+```{r echo=FALSE}
+cat("PC1o "); print_mean_sd_c(dat_pc[dat_pc$Which.PC.=='C1', ]); cat('\n')
+cat("PC1e "); print_mean_sd_c(dat_pc[dat_pc$Which.PC.=='C1_e', ]); cat('\n')
+
+cat("PD1o ");print_mean_sd_d(dat_pd[dat_pd$Which.PD.=='D1', ]); cat('\n')
+cat("PD1e ");print_mean_sd_d(dat_pd[dat_pd$Which.PD.=='D1_e', ]); cat('\n')
+```
+
