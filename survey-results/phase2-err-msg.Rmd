@@ -1,0 +1,158 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ez)
+#from https://github.com/cran/fifer/blob/master/R/chisqPostHoc.R
+chisq.post.hoc <- function(tbl,test=c("fisher.test"), popsInRows=TRUE,control=c("fdr","BH","BY","bonferroni","holm","hochberg","hommel"),digits=4, ...) {
+  #### extract correction method
+  control <- match.arg(control)
+  
+  #### extract which test (fisher or chi square) 
+  test = match.fun(test)
+
+  #### test rows or columns
+  if (!popsInRows) tbl <- t(tbl)
+  popsNames <- rownames(tbl)
+  
+    #### come up with all possible comparisons
+  prs <- combn(1:nrow(tbl),2)
+  
+  #### preallocate  
+  tests <- ncol(prs)
+  pvals <- numeric(tests)
+  lbls <- character(tests)
+  for (i in 1:tests) {
+    pvals[i] <- test(tbl[prs[,i],], ...)$p.value
+    lbls[i] <- paste(popsNames[prs[,i]],collapse=" vs. ")
+  }
+  adj.pvals <- p.adjust(pvals,method=control)
+  cat("Adjusted p-values used the",control,"method.\n\n")
+  data.frame(comparison=lbls,raw.p=round(pvals,digits),adj.p=round(adj.pvals,digits))
+}
+
+#from https://rdrr.io/cran/RVAideMemoire/src/R/se.R
+se <-
+function(x,y=NULL) {
+  if (is.null(y)) {
+    result <- sd(x,na.rm=TRUE)/sqrt(length(na.omit(x)))
+  } else {
+    p <- x/y
+    result <- sqrt((p*(1-p))/y)
+  }
+  return(result)
+}
+
+print_ez_anova_result = function(ezANOVA_ret, df = F) {
+  if (df) {
+    cat(paste0('"(', ezANOVA_ret$ANOVA$DFn, ',', ezANOVA_ret$ANOVA$DFd, ')",'))
+  }
+  cat(ezANOVA_ret$ANOVA$F, ',',ezANOVA_ret$ANOVA$p, ',',ezANOVA_ret$ANOVA$ges, ',')
+}
+
+print_chi_square_result = function(res, df = F) {
+  cat(res$statistic, ',',res$p.value,',')
+}
+
+my_ez_anova = function(mydata, mydv, mybetween) {
+  #cat(!!!mydv, '\n')
+  
+  eval(parse(text=paste0("ezANOVA(mydata, dv=", mydv,", wid=ID, between=", mybetween, ", detailed=T)")))
+  #print(ret)
+}
+
+do_anova = function(mydata, dv, between, show_df = F) {
+  print_ez_anova_result(my_ez_anova(mydata, dv, between), df = show_df)
+}
+
+do_chi_square = function(mydata) {
+  print_chi_square_result(chisq.test(mydata))
+}
+
+```
+
+
+Statistics and Tests for Q1 to Q6 in Phase 2
+======
+```{r echo=FALSE}
+dat = read.csv('../survey-responses/responses.csv')
+dat_pc = dat[dat$Which.PC.=='C1'|dat$Which.PC.=='C1_e', ]
+dat_pd = dat[dat$Which.PD.=='D1'|dat$Which.PD.=='D1_e', ]
+```
+
+## Q4
+main effect of PC, $p$-value:
+```{r, echo=FALSE, warning=FALSE, results=FALSE, message=FALSE}
+result = my_ez_anova(dat_pc, "PC.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10..", "Which.PC.")
+```
+```{r}
+result$ANOVA$p
+```
+main effect of PD, $p$-value:
+```{r, echo=FALSE, warning=FALSE, results=FALSE, message=FALSE}
+result = my_ez_anova(dat_pd, "PD.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10..", "Which.PD.")
+```
+```{r}
+result$ANOVA$p
+```
+pairwise test for PC:
+```{r}
+pairwise.t.test(dat_pc$PC.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10.., dat_pc$Which.PC., p.adjust = "bonferroni", pooled.sd=T)
+```
+
+pairwise test for PD:
+```{r}
+pairwise.t.test(dat_pd$PD.Q4..d..Given.the.above.error.messages..please.rate.how.easy.or.how.difficult.it.is.to.figure.out.the.error.of.the.above.program.on.a.scale.from.1.to.10.., dat_pd$Which.PD., p.adjust = "bonferroni", pooled.sd=T)
+```
+
+## Q5
+main effect of PC, $p$-value:
+```{r, echo=FALSE, warning=FALSE, results=FALSE, message=FALSE}
+result = my_ez_anova(dat_pc, "PC.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10..", "Which.PC.")
+```
+```{r}
+result$ANOVA$p
+```
+main effect of PD, $p$-value:
+```{r, echo=FALSE, warning=FALSE, results=FALSE, message=FALSE}
+result = my_ez_anova(dat_pd, "PD.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10..", "Which.PD.")
+```
+```{r}
+result$ANOVA$p
+```
+pairwise test for PC:
+```{r}
+pairwise.t.test(dat_pc$PC.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10.., dat_pc$Which.PC., p.adjust = "bonferroni", pooled.sd=T)
+```
+
+pairwise test for PD:
+```{r}
+pairwise.t.test(dat_pd$PD.Q5..e..Please.rate.the.helpfulness.of.the.above.error.messages.to.your.understanding.of.the.error.on.a.scale.from.1.to.10.., dat_pd$Which.PD., p.adjust = "bonferroni", pooled.sd=T)
+```
+
+## Q6
+main effect of PC, $p$-value:
+```{r, echo=FALSE, warning=FALSE, results=FALSE, message=FALSE}
+dat_pc <- transform(dat_pc, PC.Q6.rating = (PC.Q6.rating - min(PC.Q6.rating)) / (max(PC.Q6.rating) - min(PC.Q6.rating)))
+                #dat = dat[dat$Q7.2=="No" & dat$Q301=="Yes",]
+dat_pd <- transform(dat_pd, PD.Q6.rating = (PD.Q6.rating - min(PD.Q6.rating)) / (max(PD.Q6.rating) - min(PD.Q6.rating)))
+
+result = my_ez_anova(dat_pc, "PC.Q6.rating", "Which.PC.")
+```
+```{r}
+result$ANOVA$p
+```
+main effect of PD, $p$-value:
+```{r, echo=FALSE, warning=FALSE, results=FALSE, message=FALSE}
+result = my_ez_anova(dat_pd, "PD.Q6.rating", "Which.PD.")
+```
+```{r}
+result$ANOVA$p
+```
+pairwise test for PC:
+```{r}
+pairwise.t.test(dat_pc$PC.Q6.rating, dat_pc$Which.PC., p.adjust = "bonferroni", pooled.sd=T)
+```
+
+pairwise test for PD:
+```{r}
+pairwise.t.test(dat_pd$PD.Q6.rating, dat_pd$Which.PD., p.adjust = "bonferroni", pooled.sd=T)
+```

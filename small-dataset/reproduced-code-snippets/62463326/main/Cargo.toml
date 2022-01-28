@@ -1,0 +1,8 @@
+[package]
+name = "main"
+version = "0.1.0"
+authors = ["Linhai <songlinhai0543@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+lazy_static = "1.4.0"
