@@ -38,7 +38,7 @@ how each number in our paper
 is supported by this artifact. 
 
 
-## 3. Studying Stack Overflow Questions (Section 3 in the paper)
+## 3. Studying Stack Overflow Questions (Section 3 of the paper)
 The detailed study results are summarized in Google 
 excel [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
 All tabs mentioned in this section
@@ -55,8 +55,8 @@ The information of the sampled 100 Rust-related questions in Section 3.1.1 of th
 is in tab Section#3.1.1.
 
 The information of the sampled 100 questions of the small 
-dataset (Section 3.1.2 in the paper)
-is in Columns B-E of tab Section#3.2.
+dataset (Section 3.1.2 of the paper)
+is in Columns B--E of tab Section#3.2.
 The original web pages of the questions
 are saved in file `small-dataset/question-web-pages`. 
 The code snippets to reproduce compiler errors 
