@@ -166,8 +166,7 @@ Document
 `icse2022-ae20/survey-project/pc-pd-rubric.docx` contains PC, PD, their variants and enhanced error messages, and rubrics for Q6.
 
 ## Participants' Responses
-The responses are available online in a Google Doc 
-), in tab valid-responses.
+The responses are  in tab valid-responses.
 
 ## Statistical Results
 
