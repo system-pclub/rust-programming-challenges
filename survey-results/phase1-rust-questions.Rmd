@@ -1,0 +1,44 @@
+
+Statistics and Tests for Phase 1
+======
+In this document, we present the statistics of their experience on Rust's safety rules. 
+
+
+```{r echo=FALSE}
+dat = read.csv('../survey-responses/responses.csv')
+```
+
+### 1.10 Do you find Rust's lifetime rules confusing when programming in Rust?
+```{r}
+x = table(dat$X1.10.Do.you.find.Rust.s.lifetime.rules.confusing.when.programming.in.Rust.)
+x
+```
+### 1.11 Do you find Rust's ownership rules confusing when programming in Rust?
+
+```{r}
+y = table(dat$X1.11.Do.you.find.Rust.s.ownership.rules.confusing.when.programming.in.Rust.)
+y
+```
+
+### The first Chi-square test on at least "sometimes":
+```{r}
+chisq.test(rbind(c(x['Sometimes']+x['Most of the time']+x['Always'], x['Never']), c(y['Sometimes']+y['Most of the time']+y['Always'], y['Never'])))
+```
+
+### 1.12 Do you understand the error messages provided by the Rust compiler, when your code violates lifetime rules?
+
+```{r}
+x = table(dat$X1.12.Do.you.understand.the.error.messages.provided.by.the.Rust.compiler..when.your.code.violates.lifetime.rules.)
+x
+```
+
+### 1.13 Do you understand the error messages provided by the Rust compiler, when your code violates ownership rules?
+```{r}
+y = table(dat$X1.13.Do.you.understand.the.error.messages.provided.by.the.Rust.compiler..when.your.code.violates.ownership.rules.)
+y
+```
+
+### The second Chi-square test on "always":
+```{r}
+chisq.test(rbind(c(x['Sometimes']+x['Most of the time'], x['Always']), c(y['Sometimes']+y['Most of the time']+y['Never'], y['Always'])))
+```
