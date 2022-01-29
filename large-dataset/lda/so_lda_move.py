@@ -35,6 +35,9 @@ def read_data(path):
 
 
 docs, doc_index2id = read_data(path)
+doc_text = docs.copy()
+#print(doc_text)
+
 #
 # docs[:2]
 #
@@ -91,18 +94,18 @@ def preprocess_docs(docs: list):
 
 #preprocess_docs(docs[:1])
 
-import pickle
-preprocessed_docs_path = "preprocessed_docs_" + current_question_group + ".pickle"
+# import pickle
+# preprocessed_docs_path = "preprocessed_docs_" + current_question_group + ".pickle"
+#
+# if os.path.exists(preprocessed_docs_path):
+#     with open(path, "rb") as f:
+#         docs = pickle.load(f)
+# else:
+#
+#     with open(preprocessed_docs_path, 'wb') as f:
+#         pickle.dump(docs, f)
 
-if os.path.exists(preprocessed_docs_path):
-    with open(path, "rb") as f:
-        docs = pickle.load(f)
-else:
-    docs = preprocess_docs(docs)
-    with open(preprocessed_docs_path, 'wb') as f:
-        pickle.dump(docs, f)
-
-
+docs = preprocess_docs(docs)
 #docs[:2]
 
 def flatten_list(source: list):
@@ -124,7 +127,7 @@ def get_one_grams(sentences: list, min_count=5):
     return set(key for key, value in counter.items() if value >= min_count)
 
 # arguments
-num_topics=5
+#num_topics=8
 random_state=200
 chunksize=100
 passes=20
@@ -182,8 +185,8 @@ print(corpus[:2])
 
 len(id2word)
 
-range_start = num_topics
-range_end = range_start + 1
+range_start = 5
+range_end = 30 + 1
 
 # lda
 # Enable logging for gensim - optional
@@ -192,61 +195,6 @@ import logging
 reload(logging)
 logging.basicConfig(filename="lda_train_2.log", format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-from pprint import pformat
-
-coherence_map = {}
-from gensim.models import LdaMulticore, LdaModel
-with open("coherence_data1.txt", "w") as coherence_f:
-    coherence_f.write("num of topcis,average topic coherence\n")
-    for num_topics in range(range_start, range_end, 1):
-        print("start: num of topics:", num_topics)
-        lda_model = LdaModel(  
-                            corpus=corpus,
-                            id2word=id2word,
-                            num_topics=num_topics, 
-                            random_state=random_state,
-                            chunksize=chunksize,
-                            passes=passes,
-                            iterations=iterations,
-                            alpha=alpha,
-                            eta=eta,
-                            eval_every=eval_every,
-                            per_word_topics=per_word_topics)
-        top_topics = lda_model.top_topics(corpus) #, num_words=20)
-        lda_model.save(f"saved_lda_model_{num_topics}_topics")
-        # Average topic coherence is the sum of topic coherences of all topics, divided by the number of topics.
-        avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
-        print('Average topic coherence: %.4f.' % avg_topic_coherence)
-        with open(f"lda_result_{num_topics}_topics.txt", "w") as f:
-            f.write(f"average topic coherence: {avg_topic_coherence}\n")
-            f.write(pformat(top_topics) + "\n")
-        coherence_map[num_topics] = avg_topic_coherence
-        coherence_f.write(f"{num_topics},{avg_topic_coherence}\n")
-
-# lda_model = LdaModel.load("lda_model.pickle")
-id2word = lda_model.id2word
-corpus = [id2word.doc2bow(text) for text in filtered_docs]
-
-doc_lda = lda_model[corpus[0]]
-
-# classify which topics a doc belongs to.
-# this function is **wrong**. We should classify documents to topics by setting a threshold
-# , not find the largest value.
-# a doc can belong to multiple topics.
-# 张子毅的版本
-# def get_topic_docs_map(lda_model, corpus):
-#     topic_docs_map = {}
-#     for i, doc in enumerate(corpus):
-#         doc_vector = lda_model[doc]
-#         topic, prob = max(doc_vector[0], key=lambda x: x[1])
-#         if topic in topic_docs_map:
-#             topic_docs_map[topic].append((i, prob))
-#         else:
-#             topic_docs_map[topic] = [(i,prob)]
-#     for value in topic_docs_map.values():
-#         value.sort(key=lambda x: x[1], reverse=True)
-#     return topic_docs_map
-# 我的版本
 def get_topic_docs_map(lda_model, corpus):
     threshold = get_threshold(lda_model, corpus)
     print("threshold: {}".format(threshold))
@@ -271,33 +219,85 @@ def get_threshold(lda_model, corpus):
         for _topic, prob in doc_vector[0]:
             scores.append(prob)
     return sum(scores) / len(scores)
-topic_docs_map = get_topic_docs_map(lda_model, corpus)
 
-print(lda_model[corpus[10]][0])
+from pprint import pformat
 
-print(lda_model.show_topics(2, 10))
+coherence_map = {}
 
-print(lda_model[corpus[111]][0])
 
-import csv
-with open("top_topics_" + str(num_topics) + "_" + current_question_group + ".csv", "w", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow((
-        'topic',
-        'top words',
-        'num of docs',
-        'representing docs'
-    ))
-    topics = lda_model.show_topics(-1, num_words=20, formatted=False)
-    for topic_id, words in topics:
-        words = [word[0] for word in words]
-        words = ", ".join(words)
-        related_docs = topic_docs_map.get(topic_id, [])
-        related_docs = list(map(lambda x: x[0], related_docs))
-        num = len(related_docs)
-        docs = [str(doc_index2id[index]) for index in related_docs[:5]]
-        writer.writerow(("", words, num, *docs))
+from gensim.models import LdaMulticore, LdaModel
+with open("coherence_data1.txt", "w") as coherence_f:
+    coherence_f.write("num of topcis,average topic coherence\n")
+    for num_topics in range(range_start, range_end, 1):
+        print("start: num of topics:", num_topics)
+        lda_model = LdaModel(  
+                            corpus=corpus,
+                            id2word=id2word,
+                            num_topics=num_topics, 
+                            random_state=random_state,
+                            chunksize=chunksize,
+                            passes=passes,
+                            iterations=iterations,
+                            alpha=alpha,
+                            eta=eta,
+                            eval_every=eval_every,
+                            per_word_topics=per_word_topics)
+        top_topics = lda_model.top_topics(corpus) #, num_words=20)
+        print(top_topics)
+        lda_model.save(f"saved_lda_model_{num_topics}_topics")
+        # Average topic coherence is the sum of topic coherences of all topics, divided by the number of topics.
+        avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
+        print('Average topic coherence: %.4f.' % avg_topic_coherence)
+        with open(f"lda_result_{num_topics}_topics.txt", "w") as f:
+            f.write(f"average topic coherence: {avg_topic_coherence}\n")
+            f.write(pformat(top_topics) + "\n")
+        coherence_map[num_topics] = avg_topic_coherence
+        coherence_f.write(f"{num_topics},{avg_topic_coherence}\n")
+        id2word = lda_model.id2word
+        corpus = [id2word.doc2bow(text) for text in filtered_docs]
 
-lda_save_path = r"lda_model.pickle"
-lda_model.save(lda_save_path)
+        doc_lda = lda_model[corpus[0]]
+        topic_docs_map = get_topic_docs_map(lda_model, corpus)
+        import csv
+
+        with open("top_topics_" + str(num_topics) + "_" + current_question_group + ".csv", "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow((
+                'topic',
+                'top words',
+                'num of docs',
+                'representing docs'
+            ))
+            topics = lda_model.show_topics(-1, num_words=20, formatted=False)
+            for topic_id, words in topics:
+                print(words)
+                words = [word[0] for word in words]
+                words = ", ".join(words)
+                related_docs = topic_docs_map.get(topic_id, [])
+                related_docs = list(map(lambda x: x[0], related_docs))
+                num = len(related_docs)
+                docs = [str(doc_index2id[index]) for index in related_docs[:5]]
+                writer.writerow(("", words, num, *docs))
+
+
+# classify which topics a doc belongs to.
+# this function is **wrong**. We should classify documents to topics by setting a threshold
+# , not find the largest value.
+# a doc can belong to multiple topics.
+# 张子毅的版本
+# def get_topic_docs_map(lda_model, corpus):
+#     topic_docs_map = {}
+#     for i, doc in enumerate(corpus):
+#         doc_vector = lda_model[doc]
+#         topic, prob = max(doc_vector[0], key=lambda x: x[1])
+#         if topic in topic_docs_map:
+#             topic_docs_map[topic].append((i, prob))
+#         else:
+#             topic_docs_map[topic] = [(i,prob)]
+#     for value in topic_docs_map.values():
+#         value.sort(key=lambda x: x[1], reverse=True)
+#     return topic_docs_map
+# 我的版本
+
+
 
