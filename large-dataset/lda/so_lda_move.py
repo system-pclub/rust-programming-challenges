@@ -20,7 +20,7 @@ def get_question_id_list():
     ret = set()
     with open(current_question_group+'.txt') as fd:
         for line in fd:
-            ret.add(line.strip())
+            ret.add(int(line.strip()))
     return ret
 
 
