@@ -145,7 +145,7 @@ After the interview, we summarized the process into a table, which is located at
 The results are presented in column AN:AO in tab Section#3.4.
 
 # Surveying Rust Programmers (Section 4)
-The data and results are summarize in a Google Doc [here](https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0). 
+The data and results are summarized in a Google Doc [here](https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0). 
 All tabs mentioned in this section are in this document, unless otherwise specified.
 
 Some results are computed with R markdown documents.
