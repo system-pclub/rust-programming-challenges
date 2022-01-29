@@ -10,7 +10,7 @@ It contains the following descriptions:
 ## 1. Artifact Expectation
 
 The collected data and the scripts to analyze the data are released in this repository.
-The detailed study results are released in a Excel document. 
+The detailed study results are released in two Spreadsheet documents. 
 Our scripts are implemented either in Python or in R. 
 All Python scripts can be executed by Python 3.6 or a higher version. 
 All R scripts can be executed by R 3.6 or a higher version.
