@@ -149,8 +149,7 @@ The data and results are summarize in a Google Doc [here](https://docs.google.co
 All tabs mentioned in this section are in this document, unless otherwise specified.
 
 Some results are computed with R markdown documents.
-Besides the copies in the repository, the Rmd (R Markdown) files are also available both in the virtual machine and the RStudio Cloud project here:
-https://rstudio.cloud/project/3466569. (You may need to sign up to make a copy.)
+Besides the copies in the repository, the Rmd (R Markdown) files are also available both in the virtual machine and a RStudio Cloud project [here](https://rstudio.cloud/project/3466569). (You may need to sign up to make a copy.)
 To compute and view the results, click the "Knit" button from RStudio after opening the Rmd file.
 
 You may also install the necessary packages and execute them from a local machine, but the reproducibility is not guaranteed.
@@ -181,20 +180,24 @@ The statistical results are presented in
 The results in line 846-859 are presented in the following document.
 `survey-results/phase1-rust-questions.Rmd`
 ### Section 4.2.2 Phase 2
-#### Statistical tests
-`survey-results/phase2.Rmd` and `survey-results/phase2-err-msg.Rmd`.
-#### Table 3
-`survey-results/table3.Rmd`.
-#### Q1 selecting tuples in PC
-See sheet "phase 2 PC - Q1 selected tuple". 
-Corresponding answers are highlighted.
-#### Q3 wrong choices
-See sheet "phase 2 PC - Q3 wrong choices" and "phase 2 PD - Q3 wrong choices".
-Corresponding answers are highlighted.
-#### Q6 wrong understanding
-See sheet "phase 2 PD1 - Q6 wrong understanding".
-Corresponding answers are highlighted.
-### Section 4.2.3 
-To protect participants' privacy, we only present the statistical results.
-`icse2022-ae20/survey-results/phase3.pdf`
+Discussions of PA and PB in line 857 to 861 are presented in tab phase-2-PA-PB.
+
+ANOVA and Chi-Square Tests for Q1-Q6 are presented in 
+`survey-results/phase2.Rmd`.
+
+Lines 1007 to 1021 in the paper present the effect of enhanced error messages. ANOVA Tests for the effect of Enhanced Error Messages are presented in 
+`survey-results/phase2-err-msg.Rmd`.
+
+The results in Table 3 are presented in `survey-results/table3.Rmd`.
+
+The related responses discussed in Line 917 to 927 in the paper are marked in column E in tab phase-2-PC.
+
+The related responses discussed in Line in line 951 to 971 in the paper for PC are marked in column H in tab phase-2-PC.
+They are further discussed in line 994-995, which are marked in column M.
+For PD, they are marked in column G, tab phase-2-PD.
+
+The five responses mentioned in line 998 are marked in column L, tab phase-2-PD.
+
+### Section 4.2.3 Phase 3
+To protect participants' privacy, we only present the statistical results in `icse2022-ae20/survey-results/phase3.pdf`.
 
