@@ -90,7 +90,7 @@ With the help of the LDA model, we identified the involved code constructs in th
 We then computed the lift metric on these code constructs and violations. The details of the LDA model and the lift metric
 are listed below.
 
-### 3.3.1 LDA Model
+#### 3.3.1 LDA Model
 We first identify Stack Overflow questions in the large dataset related to categories of "lifetime", "borrow" and "move", with the help of their tags. 
 
 The number of questions under each tag (results in line 554 and 555 in the paper) are listed in Column A and B, tab Section#3.3.1.
@@ -121,7 +121,7 @@ It also generates files `top_topics_5_lifetime.csv` to `top_topics_30_lifetime.c
 The result of `top_topics_5_lifetime.csv` corresponds to tab Section#3.3.1-LDA-lifetime.
 
 
-### 3.3.2 Lift Correlation
+#### 3.3.2 Lift Correlation
 The categorization of each violation's related code construct is listed in tab Section#3.3.2.
 
 We selected code constructs with more than ten questions in the small dataset, and presented their lift metrics in cells AB140--AH157 in tab Section#3.3.2.
@@ -134,16 +134,16 @@ python3 lift.csv.py
 ``` 
 shows the table in tab Section#3.3.2 on standard output.
 
-## 3.4 Evaluating Compiler Error Messages
+### 3.4 Evaluating Compiler Error Messages
 We first conducted a cognitive task analysis to identify the process of comprehending compile errors.
 Then we identified whether the error message is helpful, and what information they lack.
-### 3.4.1 Cognitive Task Analysis
+#### 3.4.1 Cognitive Task Analysis
 
 The interview protocol is located at `cognitive-task-analysis/interview.docx`.
 
 After the interview, we summarized the process into a table, which is located at  `cognitive-task-analysis/outcome.xlsx`.
 
-### 3.4.2 Studying Violations
+#### 3.4.2 Studying Violations
 The results are presented in column AN:AO in tab Section#3.4.
 
 # 4. Surveying Rust Programmers (Section 4 in the paper)
@@ -164,7 +164,7 @@ We provided multiple formats for the survey:
 3. An example survey response that has a similar appearance to the actual online survey: `survey-project/example-response.pdf`
 
 Document
-`icse2022-ae20/survey-project/pc-pd-rubric.docx` contains PC, PD, their variants and enhanced error messages, and rubrics for Q6.
+`survey-project/pc-pd-rubric.docx` contains PC, PD, their variants and enhanced error messages, and rubrics for Q6.
 
 ## 4.2 Survey Results
 
@@ -200,5 +200,5 @@ For PD, they are marked in column G, tab phase-2-PD.
 The five responses mentioned in line 998 are marked in column L, tab phase-2-PD.
 
 ### 4.2.3 Phase 3
-To protect participants' privacy, we only present the statistical results in `icse2022-ae20/survey-results/phase3.pdf`.
+To protect participants' privacy, we only present the statistical results in `survey-results/phase3.pdf`.
 
