@@ -64,31 +64,33 @@ are saved in file `small-dataset/question-web-pages`.
 The code snippets to reproduce compiler errors 
 are under directory `small-dataset/reproduced-code-snippets`.
 
-### Section 3.2.1 Complex Lifetime Computation
+### 3.2 Which Safety Rules are Difficult?
+The results of this section is presented in tab Section#3.2.
+#### 3.2.1 Complex Lifetime Computation
 There are three categories of complex lifetime computations: Intra-procedural Lifetime Computation, Inter-procedural Lifetime Computation, Simple Syntax Errors.
 The information of which category each violation belongs to is listed in Columns G--I of tab Section#3.2.
 Columns K--N shows the detailed sub-categories of violations under Intra-procedural Lifetime Computation.
 Columns P--T shows the detailed sub-categories of violations under Inter-procedural Lifetime Computation.
 
 
-### Section 3.2.2 Violating Ownership Rules
+#### 3.2.2 Violating Ownership Rules
 There are two categories of ownership violations, Move Rule Violations and Borrowing Rule Violations.
 The information of which category each violation belongs to is listed in Columns K--L of tab Section#3.2.
 Columns Y--Z shows the detailed sub-categories of violations belonging to Move Rule Violations.
 Columns AB--AH shows the detailed sub-categories of violations belonging to Borrowing Rule Violations.
 
 
-### Section 3.2.3 How Violations are Fixed? 
+#### 3.2.3 How Violations are Fixed? 
 The category of how each violation is fixed is listed in Columns AJ--AM.
 
-## Section 3.3 When a Safety Rule is More Confusing?
+### 3.3 When a Safety Rule is More Confusing?
 In this section, we applied the LDA model to identify potential situations where a safety rule is more confusing.
 With the help of the LDA model, we identified the involved code constructs in the violations.
 
 We then computed the lift metric on these code constructs and violations. The details of the LDA model and the lift metric
 are listed below.
 
-### Section 3.3.1  LDA Model
+### 3.3.1 LDA Model
 We first identify Stack Overflow questions in the large dataset related to categories of "lifetime", "borrow" and "move", with the help of their tags. 
 
 The number of questions under each tag (results in line 554 and 555 in the paper) are listed in Column A and B, tab Section#3.3.1.
@@ -119,10 +121,9 @@ It also generates files `top_topics_5_lifetime.csv` to `top_topics_30_lifetime.c
 The result of `top_topics_5_lifetime.csv` corresponds to tab Section#3.3.1-LDA-lifetime.
 
 
-### Code Construct Information
-The categorization of each violation's related code constructs is listed in tab Section#3.3.2.
+### 3.3.2 Lift Correlation
+The categorization of each violation's related code construct is listed in tab Section#3.3.2.
 
-### Section 3.3.2 Lift Correlation
 We selected code constructs with more than ten questions in the small dataset, and presented their lift metrics in cells AB140--AH157 in tab Section#3.3.2.
 
 The Python script to compute lift is located in `small-dataset/lift/lift.csv.py`.
@@ -133,19 +134,19 @@ python3 lift.csv.py
 ``` 
 shows the table in tab Section#3.3.2 on standard output.
 
-## Section 3.4 Evaluating Compiler Error Messages
+## 3.4 Evaluating Compiler Error Messages
 We first conducted a cognitive task analysis to identify the process of comprehending compile errors.
 Then we identified whether the error message is helpful, and what information they lack.
-### Cognitive Task Analysis
+### 3.4.1 Cognitive Task Analysis
 
 The interview protocol is located at `cognitive-task-analysis/interview.docx`.
 
 After the interview, we summarized the process into a table, which is located at  `cognitive-task-analysis/outcome.xlsx`.
 
-### Studying Violations
+### 3.4.2 Studying Violations
 The results are presented in column AN:AO in tab Section#3.4.
 
-# Surveying Rust Programmers (Section 4)
+# 4. Surveying Rust Programmers (Section 4 in the paper)
 The data and results are summarized in a Google Doc [here](https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0). 
 All tabs mentioned in this section are in this document, unless otherwise specified.
 A copy of the document is saved in this repository named `user-study.xlsx`.
@@ -156,7 +157,7 @@ Users can open the files in RStudio and click the "Knit" button from RStudio aft
 
 You may also install the necessary packages and execute them from a local machine, but the reproducibility is not guaranteed.
 
-## The Survey
+## 4.1 Methodology (The Survey)
 We provided multiple formats for the survey:
 1. Qualtrics Project file, located in `survey-project/Qualtrics_project.qsf`. This file can be imported to Qualtrics and can facilitate future works on surveying programmers.
 2. A brief description of the survey, located in `survey-project/survey-description.pdf`.
@@ -165,12 +166,11 @@ We provided multiple formats for the survey:
 Document
 `icse2022-ae20/survey-project/pc-pd-rubric.docx` contains PC, PD, their variants and enhanced error messages, and rubrics for Q6.
 
-## Participants' Responses
+## 4.2 Survey Results
+
 The responses are  in tab valid-responses.
 
-## Statistical Results
-
-### Section 4.2.1 Phase 1
+### 4.2.1 Phase 1
 ####  Demographic Information 
 The demographic information are presented in line 832-839 in the paper.
 To protect participants' privacy, we cannot release their original answers. 
@@ -180,7 +180,7 @@ The statistical results are presented in
 #### Rust Experience
 The results in line 846-859 are presented in the following document.
 `survey-results/phase1-rust-questions.Rmd`
-### Section 4.2.2 Phase 2
+### 4.2.2 Phase 2
 Discussions of PA and PB in line 857 to 861 are presented in tab phase-2-PA-PB.
 
 ANOVA and Chi-Square Tests for Q1-Q6 are presented in 
@@ -199,6 +199,6 @@ For PD, they are marked in column G, tab phase-2-PD.
 
 The five responses mentioned in line 998 are marked in column L, tab phase-2-PD.
 
-### Section 4.2.3 Phase 3
+### 4.2.3 Phase 3
 To protect participants' privacy, we only present the statistical results in `icse2022-ae20/survey-results/phase3.pdf`.
 
