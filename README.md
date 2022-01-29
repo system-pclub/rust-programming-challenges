@@ -118,10 +118,13 @@ It also generates files `top_topics_5_lifetime.csv` to `top_topics_30_lifetime.c
 The result of `top_topics_5_lifetime.csv` corresponds to tab Section#3.3.1-LDA-lifetime.
 
 
-### Section 3.3.2
-We selected code constructs with more than ten questions in the small dataset, and presented their lift metrics in tab Section#3.3.2.
+### Code Construct Information
+The categorization of each violation's related code constructs is listed in tab Section#3.3.2.
 
-The Python script is located in `small-dataset/lift/lift.csv.py`.
+### Section 3.3.2 Lift Correlation
+We selected code constructs with more than ten questions in the small dataset, and presented their lift metrics in cells AB140--AH157 in tab Section#3.3.2.
+
+The Python script to compute lift is located in `small-dataset/lift/lift.csv.py`.
 Executing
 ```
 cd small-dataset/lift
@@ -130,13 +133,15 @@ python3 lift.csv.py
 shows the table in tab Section#3.3.2 on standard output.
 
 ## Section 3.4
-
+We first conducted a cognitive task analysis to identify the process of comprehending compile errors.
+Then we identified whether the error message is helpful, and what information they lack.
 ### Cognitive Task Analysis
-Interview Protocol: `icse2022-ae20/cognitive-task-analysis/interview.docx`
 
-Outcome: `icse2022-ae20/cognitive-task-analysis/outcome.xlsx`
+The interview protocol is located at `cognitive-task-analysis/interview.docx`.
 
-### Results
+After the interview, we summarized the process into a table, which is located at  `cognitive-task-analysis/outcome.xlsx`.
+
+### Studying Violations
 See column AN:AO in sheet "Section 3.2" and sheet "Section 3.4".
 
 # Section 4
