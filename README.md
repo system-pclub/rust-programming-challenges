@@ -91,27 +91,49 @@ We then computed the lift metric on these code constructs and violations. The de
 are listed below.
 
 ### Section 3.3.1  LDA Model
-We first identify Stack Overflow questions with their tags. 
-Results in line 554 and 555 are listed in tab Section#3.3-tag-count.
-Tags of different groups are highlighted with different colors, which are indicated in column D.
+We first identify Stack Overflow questions in the large dataset related to categories of "lifetime", "borrow" and "move", with the help of their tags. 
 
-The LDA results are presented in sheet 'Section 3.3.1 LDA-"lifetime"',
-'Section 3.3.1 LDA-"borrow"', and 'Section 3.3.1 LDA-"move"'.
-Each sheet uses topic numbers 28, 6, and 9 respectively.
+The number of questions under each tag (results in line 554 and 555 in the paper) are listed in tab Section#3.3-tag-count.
+Tags of different categories are highlighted with different colors, which are indicated in column D.
 
-For example, 204 questions contain the topic about 
-how to use lifetime annotations in a trait, 
-32 questions contain the topic about how to borrow from an iterator or a container, and and three questions are about how to use move with pattern matching."
+Next, we decide the topic numbers for the LDA model, by choosing the ones with the best coherence value (line 564-566 in the paper).
+The results are presented in tab Section#3.3-topic-number-coherence.
 
-See the cells marked in green. The 415 questions of lifetime annotations
-are summarized by using topic number = 8.
+The results of each question category are presented in tab Section#3.3.1-LDA-lifetime, Section#3.3.1-LDA-borrow and Section#3.3.1-LDA-move.
+The examples presented in line 569-572 are highlighted in each tab.
+
+The Python scripts to compute the results are located in `large-dataset/lda/`.
+There are three Python source code files, `so_lda_lifetime.py`, `so_lda_borrow.py`, and `so_lda_move.py`.
+
+For example, executing 
+```
+cd large-dataset/lda/
+python3 so_lda_lifetime.py
+``` 
+will generate files `lda_result_5_topics.txt` to `lda_result_30_topics.txt` in the same directory.
+Then, using a shell command 
+```
+for x in {5..30}; do head -n 1 lda_result_${x}_topics.txt; done
+```
+can check the coherence value under each topic number.
+
+It also generates files `top_topics_5_lifetime.csv` to `top_topics_30_lifetime.csv`.
+The result of `top_topics_5_lifetime.csv` corresponds to tab Section#3.3.1-LDA-lifetime.
 
 
 ### Section 3.3.2
-Results: sheet "Section 3.3.2".
+We selected code constructs with more than ten questions in the small dataset, and presented their lift metrics in tab Section#3.3.2.
 
+The Python script is located in `small-dataset/lift/lift.csv.py`.
+Executing
+```
+cd small-dataset/lift
+python3 lift.csv.py
+``` 
+shows the table in tab Section#3.3.2 on standard output.
 
 ## Section 3.4
+
 ### Cognitive Task Analysis
 Interview Protocol: `icse2022-ae20/cognitive-task-analysis/interview.docx`
 
