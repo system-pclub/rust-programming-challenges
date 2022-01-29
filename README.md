@@ -41,6 +41,7 @@ is supported by this artifact.
 ## 3. Studying Stack Overflow Questions (Section 3 of the paper)
 The detailed study results are summarized in the Google Doc
 [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
+A copy `empirical-study.xlsx` is saved in this repository.
 
 All tabs mentioned in this section
 are in this document, unless otherwise specified. 
@@ -147,10 +148,11 @@ The results are presented in column AN:AO in tab Section#3.4.
 # Surveying Rust Programmers (Section 4)
 The data and results are summarized in a Google Doc [here](https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0). 
 All tabs mentioned in this section are in this document, unless otherwise specified.
+A copy of the document is saved in this repository named `user-study.xlsx`.
 
 Some results are computed with R markdown documents.
-Besides the copies in the repository, the Rmd (R Markdown) files are also available both in the virtual machine and a RStudio Cloud project [here](https://rstudio.cloud/project/3466569). (You may need to sign up to make a copy.)
-To compute and view the results, click the "Knit" button from RStudio after opening the Rmd file.
+Besides the copies in the repository, the Rmd (R Markdown) files are also available in the virtual machine.
+Users can open the files in RStudio and click the "Knit" button from RStudio after opening the Rmd file to compute and view the results.
 
 You may also install the necessary packages and execute them from a local machine, but the reproducibility is not guaranteed.
 
