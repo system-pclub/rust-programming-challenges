@@ -1,7 +1,7 @@
 # The code, analysis scripts and results for ICSE 2022 Artifact Evaluation
 
 Version: 1.1\
-Update:  Jan 28, 2022\
+Update:  Jan 29, 2022\
 Paper:   Learning and Programming Challenges of Rust: A Mixed-Methods Study (#1162)
 
 This document is to help users reproduce the results we reported in our submission. 
