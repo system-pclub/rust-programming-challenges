@@ -39,9 +39,7 @@ is supported by this artifact.
 
 
 ## 3. Studying Stack Overflow Questions (Section 3 of the paper)
-The detailed study results are summarized in the Excel document located in
-TODO of this repository.
-
+The detailed study results are summarized in the Google Doc
 [empirical-study](https://docs.google.com/spreadsheets/d/1_uipSVvq0l8MLYN4XXqHP1hgcPp1wvNDnqJ4eu0GpZE/edit#gid=534399057). 
 
 All tabs mentioned in this section
@@ -68,24 +66,23 @@ are under directory `small-dataset/reproduced-code-snippets`.
 ### Section 3.2.1 Complex Lifetime Computation
 There are three categories of complex lifetime computations: Intra-procedural Lifetime Computation, Inter-procedural Lifetime Computation, Simple Syntax Errors.
 The information of which category each violation belongs to is listed in Columns G--I of tab Section#3.2.
-Tab Section#3.2.1-Intra-procedural shows the detailed sub-categories of violations under Intra-procedural Lifetime Computation.
-Tab Section#3.2.1-Inter-procedual shows the detailed sub-categories of violations under Inter-procedural Lifetime Computation.
+Columns K--N shows the detailed sub-categories of violations under Intra-procedural Lifetime Computation.
+Columns P--T shows the detailed sub-categories of violations under Inter-procedural Lifetime Computation.
 
 
 ### Section 3.2.2 Violating Ownership Rules
 There are two categories of ownership violations, Move Rule Violations and Borrowing Rule Violations.
 The information of which category each violation belongs to is listed in Columns K--L of tab Section#3.2.
-Tab Section#3.2.2-Move shows the detailed sub-categories of violations belonging to Move Rule Violations.
-Tab Section#3.2.2-Borrow shows the detailed sub-categories of violations belonging to Borrowing Rule Violations.
+Columns Y--Z shows the detailed sub-categories of violations belonging to Move Rule Violations.
+Columns AB--AH shows the detailed sub-categories of violations belonging to Borrowing Rule Violations.
 
 
 ### Section 3.2.3 How Violations are Fixed? 
-The category of how each violation is fixed is listed in Columns N--Q.
+The category of how each violation is fixed is listed in Columns AJ--AM.
 
 ## Section 3.3 When a Safety Rule is More Confusing?
 In this section, we applied the LDA model to identify potential situations where a safety rule is more confusing.
 With the help of the LDA model, we identified the involved code constructs in the violations.
-They are listed in tab Section#3.3.
 
 We then computed the lift metric on these code constructs and violations. The details of the LDA model and the lift metric
 are listed below.
@@ -93,11 +90,11 @@ are listed below.
 ### Section 3.3.1  LDA Model
 We first identify Stack Overflow questions in the large dataset related to categories of "lifetime", "borrow" and "move", with the help of their tags. 
 
-The number of questions under each tag (results in line 554 and 555 in the paper) are listed in tab Section#3.3-tag-count.
+The number of questions under each tag (results in line 554 and 555 in the paper) are listed in Column A and B, tab Section#3.3.1.
 Tags of different categories are highlighted with different colors, which are indicated in column D.
 
 Next, we decide the topic numbers for the LDA model, by choosing the ones with the best coherence value (line 564-566 in the paper).
-The results are presented in tab Section#3.3-topic-number-coherence.
+The results are presented in Column H--O.
 
 The results of each question category are presented in tab Section#3.3.1-LDA-lifetime, Section#3.3.1-LDA-borrow and Section#3.3.1-LDA-move.
 The examples presented in line 569-572 are highlighted in each tab.
@@ -159,11 +156,10 @@ https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B
 
 ### Demographic Information
 To protect participants' privacy, we only present the statistical results.
-`icse2022-ae20/survey-results/phase1.pdf`
+`survey-results/phase1.pdf`
 
 ### Section 4.2.1
-https://colab.research.google.com/drive/1dEUSHeLGEV3b6oFAkjnb3wPcautIb44I?usp=sharing#scrollTo=TBxxu1U5WPxs
-
+`survey-results/phase1-rust-questions.Rmd`
 ### Section 4.2.2 
 The Rmd (R Markdown) files are available both in the virtual machine and the RStudio Cloud project here:
 https://rstudio.cloud/project/3466569
@@ -171,9 +167,9 @@ To execute and view the files, click the "Knit" button from RStudio after openin
 You may also install package "ez" and execute them from a local machine, but the reproduction of the results are not
 guaranteed.
 #### Statistical tests
-`icse2022-ae20/survey-results/phase2.Rmd` and `icse2022-ae20/survey-results/phase2-err-msg.Rmd`.
+`survey-results/phase2.Rmd` and `survey-results/phase2-err-msg.Rmd`.
 #### Table 3
-`icse2022-ae20/survey-results/table3.Rmd`.
+`survey-results/table3.Rmd`.
 #### Q1 selecting tuples in PC
 See sheet "phase 2 PC - Q1 selected tuple". 
 Corresponding answers are highlighted.
