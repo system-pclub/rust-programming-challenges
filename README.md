@@ -146,7 +146,7 @@ After the interview, we summarized the process into a table, which is located at
 #### 3.4.2 Studying Violations
 The results are presented in column AN:AO in tab Section#3.4.
 
-# 4. Surveying Rust Programmers (Section 4 in the paper)
+## 4. Surveying Rust Programmers (Section 4 in the paper)
 The data and results are summarized in a Google Doc [here](https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0). 
 All tabs mentioned in this section are in this document, unless otherwise specified.
 A copy of the document is saved in this repository named `user-study.xlsx`.
@@ -157,7 +157,7 @@ Users can open the files in RStudio and click the "Knit" button from RStudio aft
 
 You may also install the necessary packages and execute them from a local machine, but the reproducibility is not guaranteed.
 
-## 4.1 Methodology (The Survey)
+### 4.1 Methodology (The Survey)
 We provided multiple formats for the survey:
 1. Qualtrics Project file, located in `survey-project/Qualtrics_project.qsf`. This file can be imported to Qualtrics and can facilitate future works on surveying programmers.
 2. A brief description of the survey, located in `survey-project/survey-description.pdf`.
@@ -166,21 +166,21 @@ We provided multiple formats for the survey:
 Document
 `survey-project/pc-pd-rubric.docx` contains PC, PD, their variants and enhanced error messages, and rubrics for Q6.
 
-## 4.2 Survey Results
+### 4.2 Survey Results
 
 The responses are  in tab valid-responses.
 
-### 4.2.1 Phase 1
-####  Demographic Information 
+#### 4.2.1 Phase 1
+#####  Demographic Information 
 The demographic information are presented in line 832-839 in the paper.
 To protect participants' privacy, we cannot release their original answers. 
 The statistical results are presented in 
 `survey-results/phase1.pdf`.
 
-#### Rust Experience
+##### Rust Experience
 The results in line 846-859 are presented in the following document.
 `survey-results/phase1-rust-questions.Rmd`
-### 4.2.2 Phase 2
+#### 4.2.2 Phase 2
 Discussions of PA and PB in line 857 to 861 are presented in tab phase-2-PA-PB.
 
 ANOVA and Chi-Square Tests for Q1-Q6 are presented in 
@@ -199,6 +199,6 @@ For PD, they are marked in column G, tab phase-2-PD.
 
 The five responses mentioned in line 998 are marked in column L, tab phase-2-PD.
 
-### 4.2.3 Phase 3
+#### 4.2.3 Phase 3
 To protect participants' privacy, we only present the statistical results in `survey-results/phase3.pdf`.
 
