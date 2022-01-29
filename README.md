@@ -132,7 +132,7 @@ python3 lift.csv.py
 ``` 
 shows the table in tab Section#3.3.2 on standard output.
 
-## Section 3.4
+## Section 3.4 Evaluating Compiler Error Messages
 We first conducted a cognitive task analysis to identify the process of comprehending compile errors.
 Then we identified whether the error message is helpful, and what information they lack.
 ### Cognitive Task Analysis
@@ -142,35 +142,45 @@ The interview protocol is located at `cognitive-task-analysis/interview.docx`.
 After the interview, we summarized the process into a table, which is located at  `cognitive-task-analysis/outcome.xlsx`.
 
 ### Studying Violations
-See column AN:AO in sheet "Section 3.2" and sheet "Section 3.4".
+The results are presented in column AN:AO in tab Section#3.4.
 
-# Section 4
+# Surveying Rust Programmers (Section 4)
+The data and results are summarize in a Google Doc [here](https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0). 
+All tabs mentioned in this section are in this document, unless otherwise specified.
+
+Some results are computed with R markdown documents.
+Besides the copies in the repository, the Rmd (R Markdown) files are also available both in the virtual machine and the RStudio Cloud project here:
+https://rstudio.cloud/project/3466569. (You may need to sign up to make a copy.)
+To compute and view the results, click the "Knit" button from RStudio after opening the Rmd file.
+
+You may also install the necessary packages and execute them from a local machine, but the reproducibility is not guaranteed.
+
 ## The Survey
-Qualtrics Project file: `icse2022-ae20/survey-project/Qualtrics_project.qsf` (This file can be imported to Qualtrics)
+We provided multiple formats for the survey:
+1. Qualtrics Project file, located in `survey-project/Qualtrics_project.qsf`. This file can be imported to Qualtrics and can facilitate future works on surveying programmers.
+2. A brief description of the survey, located in `survey-project/survey-description.pdf`.
+3. An example survey response that has a similar appearance to the actual online survey: `survey-project/example-response.pdf`
 
-Survey Description: `icse2022-ae20/survey-project/survey-description.pdf`
-
-PC, PD and their variants, with rubrics for Q6:
-`icse2022-ae20/survey-project/pc-pd-rubric.docx`
+Document
+`icse2022-ae20/survey-project/pc-pd-rubric.docx` contains PC, PD, their variants and enhanced error messages, and rubrics for Q6.
 
 ## Participants' Responses
-
-https://docs.google.com/spreadsheets/d/1QUN3NEk5zPHWS96cV--AM113ZHP18-9Z1_z5cV6B9b4/edit#gid=0
+The responses are available online in a Google Doc 
+), in tab valid-responses.
 
 ## Statistical Results
 
-### Demographic Information
-To protect participants' privacy, we only present the statistical results.
-`survey-results/phase1.pdf`
+### Section 4.2.1 Phase 1
+####  Demographic Information 
+The demographic information are presented in line 832-839 in the paper.
+To protect participants' privacy, we cannot release their original answers. 
+The statistical results are presented in 
+`survey-results/phase1.pdf`.
 
-### Section 4.2.1
+#### Rust Experience
+The results in line 846-859 are presented in the following document.
 `survey-results/phase1-rust-questions.Rmd`
-### Section 4.2.2 
-The Rmd (R Markdown) files are available both in the virtual machine and the RStudio Cloud project here:
-https://rstudio.cloud/project/3466569
-To execute and view the files, click the "Knit" button from RStudio after opening the Rmd file.
-You may also install package "ez" and execute them from a local machine, but the reproduction of the results are not
-guaranteed.
+### Section 4.2.2 Phase 2
 #### Statistical tests
 `survey-results/phase2.Rmd` and `survey-results/phase2-err-msg.Rmd`.
 #### Table 3
