@@ -18,6 +18,7 @@ We also prepare a VM image with pre-installed Python
 and R to ease the reproduction
 of our data analytics. 
 Users can open the image with VirtualBox 6.1 or a higher VirtualBox version. 
+We recommend using Ubuntu as the host machine to avoid compatibility issues. 
 
 ## 2. Artifact Overview
 
