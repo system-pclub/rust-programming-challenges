@@ -1,3 +1,5 @@
+(This repository has been updated. For the original version, please refer to fork [icse2022-artifact](https://github.com/system-pclub/rust-programming-challenges/tree/icse2022-artifact)).
+
 # The code, analysis scripts and results for ICSE 2022 Artifact Evaluation
 
 Version: 1.1\

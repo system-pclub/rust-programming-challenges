@@ -1,0 +1,1036 @@
+[[bin]]
+name = "36117966buggy"
+path = "./36117966/buggy.rs"
+
+# no long cause an error.
+# [[bin]]
+# name = "45833618buggy"
+# path = "./45833618/buggy.rs"
+
+[[bin]]
+name = "46965867buggy"
+path = "./46965867/buggy.rs"
+
+# [[bin]]
+# name = "27856991-2buggy"
+# path = "./27856991-2/buggy.rs"
+
+# duplicate with 58559969 after adding unit tests
+# [[bin]]
+# name = "58559969-2buggy"
+# path = "./58559969-2/buggy.rs"
+
+[[bin]]
+name = "76062607-1buggy"
+path = "./76062607p1/buggy.rs"
+
+[[bin]]
+name = "61132815-2buggy"
+path = "./61132815-2/buggy.rs"
+
+[[bin]]
+name = "27856991-3buggy"
+path = "./27856991-3/buggy.rs"
+
+[[bin]]
+name = "64040987-2buggy"
+path = "./64040987-2/buggy.rs"
+
+[[bin]]
+name = "59022234-2buggy"
+path = "./59022234-2/buggy.rs"
+
+[[bin]]
+name = "60897823-2buggy"
+path = "./60897823-2/buggy.rs"
+
+[[bin]]
+name = "35038461-2buggy"
+path = "./35038461-2/buggy.rs"
+
+[[bin]]
+name = "60897823-1buggy"
+path = "./60897823-1/buggy.rs"
+
+[[bin]]
+name = "61132815-1buggy"
+path = "./61132815-1/buggy.rs"
+
+[[bin]]
+name = "76062607p2buggy"
+path = "./76062607p2/buggy.rs"
+
+[[bin]]
+name = "65173868-2buggy"
+path = "./65173868-2/buggy.rs"
+
+# [[bin]]
+# name = "52718513-2buggy"
+# path = "./52718513-2/buggy.rs"
+
+[[bin]]
+name = "24847331buggy"
+path = "./24847331/buggy.rs"
+
+[[bin]]
+name = "24847331fixed"
+path = "./24847331/fixed.rs"
+
+[[bin]]
+name = "26190213buggy"
+path = "./26190213/buggy.rs"
+
+[[bin]]
+name = "26190213fixed"
+path = "./26190213/fixed.rs"
+
+[[bin]]
+name = "27716654buggy"
+path = "./27716654/buggy.rs"
+
+[[bin]]
+name = "27716654fixed"
+path = "./27716654/fixed.rs"
+
+[[bin]]
+name = "27856991buggy"
+path = "./27856991/buggy.rs"
+
+[[bin]]
+name = "27856991fixed"
+path = "./27856991/fixed.rs"
+
+[[bin]]
+name = "28008585buggy"
+path = "./28008585/buggy.rs"
+
+[[bin]]
+name = "29711348buggy"
+path = "./29711348/buggy.rs"
+
+[[bin]]
+name = "31067031buggy"
+path = "./31067031/buggy.rs"
+
+[[bin]]
+name = "33727808buggy"
+path = "./33727808/buggy.rs"
+
+[[bin]]
+name = "35038461buggy"
+path = "./35038461/buggy.rs"
+
+[[bin]]
+name = "36672245buggy"
+path = "./36672245/buggy.rs"
+
+# removed due to poor quality and no official fix
+# [[bin]]
+# name = "36827436buggy"
+# path = "./36827436/buggy.rs"
+
+[[bin]]
+name = "38043377buggy"
+path = "./38043377/buggy.rs"
+
+# TODO: difficult to identify a sample program.
+# [[bin]]
+# name = "38397163buggy"
+# path = "./38397163/buggy.rs"
+
+# TODO: too similar to the icse one.
+# [[bin]]
+# name = "39067812buggy"
+# path = "./39067812/buggy.rs"
+
+[[bin]]
+name = "39827244buggy"
+path = "./39827244/buggy.rs"
+
+[[bin]]
+name = "40165686buggy"
+path = "./40165686/buggy.rs"
+
+[[bin]]
+name = "40165686fixed"
+path = "./40165686/fixed.rs"
+
+[[bin]]
+name = "40262957buggy"
+path = "./40262957/buggy.rs"
+
+[[bin]]
+name = "40814832buggy"
+path = "./40814832/buggy.rs"
+
+[[bin]]
+name = "41045011buggy"
+path = "./41045011/buggy.rs"
+
+[[bin]]
+name = "41431189buggy"
+path = "./41431189/buggy.rs"
+
+[[bin]]
+name = "41529200buggy"
+path = "./41529200/buggy.rs"
+
+[[bin]]
+name = "42534811buggy"
+path = "./42534811/buggy.rs"
+
+[[bin]]
+name = "42812232buggy"
+path = "./42812232/buggy.rs"
+
+[[bin]]
+name = "43661262buggy"
+path = "./43661262/buggy.rs"
+
+[[bin]]
+name = "46393890buggy"
+path = "./46393890/buggy.rs"
+
+[[bin]]
+name = "47477739buggy"
+path = "./47477739/buggy.rs"
+
+[[bin]]
+name = "47933532buggy"
+path = "./47933532/buggy.rs"
+
+[[bin]]
+name = "49077797buggy"
+path = "./49077797/buggy.rs"
+
+[[bin]]
+name = "49393139buggy"
+path = "./49393139/buggy.rs"
+
+[[bin]]
+name = "50090553buggy"
+path = "./50090553/buggy.rs"
+
+# 51600816
+[[bin]]
+name = "51600816buggy"
+path = "./51600816/buggy.rs"
+
+[[bin]]
+name = "51600816fixed"
+path = "./51600816/fixed.rs"
+
+[[bin]]
+name = "51701393buggy"
+path = "./51701393/buggy.rs"
+
+# 53242052
+[[bin]]
+name = "53242052buggy"
+path = "./53242052/buggy.rs"
+
+[[bin]]
+name = "53242052fixed"
+path = "./53242052/fixed.rs"
+
+
+# not suitable for unit test. contains creating a new process.
+# [[bin]]
+# name = "52718513buggy"
+# path = "./52718513/buggy.rs"
+
+[[bin]]
+name = "52838884buggy"
+path = "./52838884/buggy.rs"
+
+[[bin]]
+name = "56060983buggy"
+path = "./56060983/buggy.rs"
+
+[[bin]]
+name = "56061899buggy"
+path = "./56061899/buggy.rs"
+
+[[bin]]
+name = "56336526buggy"
+path = "./56336526/buggy.rs"
+
+# TODO: skipped due to complexity.
+# [[bin]]
+# name = "56620265buggy"
+# path = "./56620265/buggy.rs"
+
+[[bin]]
+name = "58043281buggy"
+path = "./58043281/buggy.rs"
+
+[[bin]]
+name = "58157680buggy"
+path = "./58157680/buggy.rs"
+
+[[bin]]
+name = "58207846buggy"
+path = "./58207846/buggy.rs"
+
+# TODO: skipped due to file operations
+# [[bin]]
+# name = "58459643buggy"
+# path = "./58459643/buggy.rs"
+
+[[bin]]
+name = "58559969buggy"
+path = "./58559969/buggy.rs"
+
+[[bin]]
+name = "58683326buggy"
+path = "./58683326/buggy.rs"
+
+# TODO: skipped due to file operations
+# [[bin]]
+# name = "59022234buggy"
+# path = "./59022234/buggy.rs"
+
+[[bin]]
+name = "60029939buggy"
+path = "./60029939/buggy.rs"
+
+# doesn't work even with Rc<RefCell<...>>.
+# [[bin]]
+# name = "61043888buggy"
+# path = "./61043888/buggy.rs"
+
+[[bin]]
+name = "61061853buggy"
+path = "./61061853/buggy.rs"
+
+[[bin]]
+name = "61121260buggy"
+path = "./61121260/buggy.rs"
+
+[[bin]]
+name = "61297300buggy"
+path = "./61297300/buggy.rs"
+
+[[bin]]
+name = "61560298buggy"
+path = "./61560298/buggy.rs"
+
+[[bin]]
+name = "61665203buggy"
+path = "./61665203/buggy.rs"
+
+# original question is vague. skipped.
+# [[bin]]
+# name = "62867170buggy"
+# path = "./62867170/buggy.rs"
+
+[[bin]]
+name = "63428868buggy"
+path = "./63428868/buggy.rs"
+
+[[bin]]
+name = "64040987buggy"
+path = "./64040987/buggy.rs"
+
+[[bin]]
+name = "64043682buggy"
+path = "./64043682/buggy.rs"
+
+[[bin]]
+name = "64528913buggy"
+path = "./64528913/buggy.rs"
+
+[[bin]]
+name = "64627891buggy"
+path = "./64627891/buggy.rs"
+
+[[bin]]
+name = "64782348buggy"
+path = "./64782348/buggy.rs"
+
+[[bin]]
+name = "64811159buggy"
+path = "./64811159/buggy.rs"
+
+[[bin]]
+name = "65173868buggy"
+path = "./65173868/buggy.rs"
+
+# TODO: this one should be good but forgot
+# [[bin]]
+# name = "65176970buggy"
+# path = "./65176970/buggy.rs"
+
+[[bin]]
+name = "66146029buggy"
+path = "./66146029/buggy.rs"
+
+# hard to make into a test.
+# [[bin]]
+# name = "66219238buggy"
+# path = "./66219238/buggy.rs"
+
+[[bin]]
+name = "66330144buggy"
+path = "./66330144/buggy.rs"
+
+[[bin]]
+name = "66411362buggy"
+path = "./66411362/buggy.rs"
+
+# [[bin]]
+# name = "66563380buggy"
+# path = "./66563380/buggy.rs"
+
+[[bin]]
+name = "68598464buggy"
+path = "./68598464/buggy.rs"
+
+[[bin]]
+name = "69405403buggy"
+path = "./69405403/buggy.rs"
+
+[[bin]]
+name = "70148904buggy"
+path = "./70148904/buggy.rs"
+
+[[bin]]
+name = "70439544buggy"
+path = "./70439544/buggy.rs"
+
+[[bin]]
+name = "75700760buggy"
+path = "./75700760/buggy.rs"
+
+[[bin]]
+name = "75700760fixed"
+path = "./75700760/fixed.rs"
+
+[[bin]]
+name = "70717050buggy"
+path = "./70717050/buggy.rs"
+
+[[bin]]
+name = "70768081buggy"
+path = "./70768081/buggy.rs"
+
+[[bin]]
+name = "70768081-2buggy"
+path = "./70768081-2/buggy.rs"
+
+[[bin]]
+name = "70957110buggy"
+path = "./70957110/buggy.rs"
+
+# ugly fix
+# [[bin]]
+# name = "71379013buggy"
+# path = "./71379013/buggy.rs"
+
+[[bin]]
+name = "71414803buggy"
+path = "./71414803/buggy.rs"
+
+[[bin]]
+name = "71414803fixed"
+path = "./71414803/fixed.rs"
+
+[[bin]]
+name = "71475734buggy"
+path = "./71475734/buggy.rs"
+
+[[bin]]
+name = "71475734fixed"
+path = "./71475734/fixed.rs"
+
+# 71689224
+[[bin]]
+name = "71689224buggy"
+path = "./71689224/buggy.rs"
+
+[[bin]]
+name = "71689224fixed"
+path = "./71689224/fixed.rs"
+
+# long and hard to understand.
+# [[bin]]
+# name = "73064033buggy"
+# path = "./73064033/buggy.rs"
+
+[[bin]]
+name = "73402009buggy"
+path = "./73402009/buggy.rs"
+
+# 67408899
+[[bin]]
+name = "67408899buggy"
+path = "./67408899/buggy.rs"
+
+[[bin]]
+name = "67408899fixed"
+path = "./67408899/fixed.rs"
+
+# 61223234
+[[bin]]
+name = "61223234buggy"
+path = "./61223234/buggy.rs"
+
+# 76937059
+[[bin]]
+name = "76937059buggy"
+path = "./76937059/buggy.rs"
+
+[[bin]]
+name = "76937059fixed"
+path = "./76937059/fixed.rs"
+
+# 30073684
+[[bin]]
+name = "30073684buggy"
+path = "./30073684/buggy.rs"
+
+[[bin]]
+name = "30073684fixed"
+path = "./30073684/fixed.rs"
+
+# 26409316
+[[bin]]
+name = "26409316buggy"
+path = "./26409316/buggy.rs"
+
+[[bin]]
+name = "26409316fixed"
+path = "./26409316/fixed.rs"
+
+[[bin]]
+name = "61223234fixed"
+path = "./61223234/fixed.rs"
+
+# 76673743
+[[bin]]
+name = "76673743buggy"
+path = "./76673743/buggy.rs"
+
+[[bin]]
+name = "76673743fixed"
+path = "./76673743/fixed.rs"
+
+
+# 77849598: difficult to implement unit test
+# [[bin]]
+# name = "77849598buggy"
+# path = "./77849598/buggy.rs"
+
+# [[bin]]
+# name = "77849598fixed"
+# path = "./77849598/fixed.rs"
+
+# long and hard to understand.
+# [[bin]]
+# name = "73418068buggy"
+# path = "./73418068/buggy.rs"
+
+[[bin]]
+name = "73690343buggy"
+path = "./73690343/buggy.rs"
+
+[[bin]]
+name = "74416599buggy"
+path = "./74416599/buggy.rs"
+
+# 74990774
+[[bin]]
+name = "74990774buggy"
+path = "./74990774/buggy.rs"
+
+[[bin]]
+name = "74990774fixed"
+path = "./74990774/fixed.rs"
+
+# original program rewrote; not good
+# [[bin]]
+# name = "74915201buggy"
+# path = "./74915201/buggy.rs"
+
+[[bin]]
+name = "75540948buggy"
+path = "./75540948/buggy.rs"
+
+# requires rewrite.
+# [[bin]]
+# name = "75971564buggy"
+# path = "./75971564/buggy.rs"
+
+[[bin]]
+name = "77175152buggy"
+path = "./77175152/buggy.rs"
+
+# 77897472
+[[bin]]
+name = "77897472buggy"
+path = "./77897472/buggy.rs"
+
+[[bin]]
+name = "77897472fixed"
+path = "./77897472/fixed.rs"
+
+# 74837218
+[[bin]]
+name = "74837218buggy"
+path = "./74837218/buggy.rs"
+
+[[bin]]
+name = "74837218fixed"
+path = "./74837218/fixed.rs"
+
+[[bin]]
+name = "36117966fixed"
+path = "./36117966/fixed.rs"
+
+# TODO: no longer produce an error.
+# [[bin]]
+# name = "45833618fixed"
+# path = "./45833618/fixed.rs"
+
+[[bin]]
+name = "45898588buggy"
+path = "./45898588/buggy.rs"
+
+[[bin]]
+name = "45898588fixed"
+path = "./45898588/fixed.rs"
+
+# 66309886
+[[bin]]
+name = "66309886buggy"
+path = "./66309886/buggy.rs"
+
+[[bin]]
+name = "66309886fixed"
+path = "./66309886/fixed.rs"
+
+[[bin]]
+name = "46965867fixed"
+path = "./46965867/fixed.rs"
+
+# [[bin]]
+# name = "27856991-2fixed"
+# path = "./27856991-2/fixed.rs"
+
+# [[bin]]
+# name = "58559969-2fixed"
+# path = "./58559969-2/fixed.rs"
+
+[[bin]]
+name = "76062607-1fixed"
+path = "./76062607p1/fixed.rs"
+
+[[bin]]
+name = "61132815-2fixed"
+path = "./61132815-2/fixed.rs"
+
+[[bin]]
+name = "27856991-3fixed"
+path = "./27856991-3/fixed.rs"
+
+[[bin]]
+name = "64040987-2fixed"
+path = "./64040987-2/fixed.rs"
+
+[[bin]]
+name = "59022234-2fixed"
+path = "./59022234-2/fixed.rs"
+
+[[bin]]
+name = "60897823-2fixed"
+path = "./60897823-2/fixed.rs"
+
+[[bin]]
+name = "35038461-2fixed"
+path = "./35038461-2/fixed.rs"
+
+[[bin]]
+name = "60897823-1fixed"
+path = "./60897823-1/fixed.rs"
+
+[[bin]]
+name = "61132815-1fixed"
+path = "./61132815-1/fixed.rs"
+
+[[bin]]
+name = "76062607p2fixed"
+path = "./76062607p2/fixed.rs"
+
+[[bin]]
+name = "65173868-2fixed"
+path = "./65173868-2/fixed.rs"
+
+# [[bin]]
+# name = "52718513-2fixed"
+# path = "./52718513-2/fixed.rs"
+
+[[bin]]
+name = "28008585fixed"
+path = "./28008585/fixed.rs"
+
+[[bin]]
+name = "29711348fixed"
+path = "./29711348/fixed.rs"
+
+[[bin]]
+name = "31067031fixed"
+path = "./31067031/fixed.rs"
+
+[[bin]]
+name = "33727808fixed"
+path = "./33727808/fixed.rs"
+
+[[bin]]
+name = "35038461fixed"
+path = "./35038461/fixed.rs"
+
+[[bin]]
+name = "36672245fixed"
+path = "./36672245/fixed.rs"
+
+# [[bin]]
+# name = "36827436fixed"
+# path = "./36827436/fixed.rs"
+
+[[bin]]
+name = "38043377fixed"
+path = "./38043377/fixed.rs"
+
+# [[bin]]
+# name = "38397163fixed"
+# path = "./38397163/fixed.rs"
+
+# [[bin]]
+# name = "39067812fixed"
+# path = "./39067812/fixed.rs"
+
+[[bin]]
+name = "39827244fixed"
+path = "./39827244/fixed.rs"
+
+[[bin]]
+name = "40262957fixed"
+path = "./40262957/fixed.rs"
+
+[[bin]]
+name = "40814832fixed"
+path = "./40814832/fixed.rs"
+
+[[bin]]
+name = "41045011fixed"
+path = "./41045011/fixed.rs"
+
+[[bin]]
+name = "41431189fixed"
+path = "./41431189/fixed.rs"
+
+[[bin]]
+name = "41529200fixed"
+path = "./41529200/fixed.rs"
+
+[[bin]]
+name = "42534811fixed"
+path = "./42534811/fixed.rs"
+
+[[bin]]
+name = "42812232fixed"
+path = "./42812232/fixed.rs"
+
+[[bin]]
+name = "43661262fixed"
+path = "./43661262/fixed.rs"
+
+[[bin]]
+name = "46393890fixed"
+path = "./46393890/fixed.rs"
+
+[[bin]]
+name = "47477739fixed"
+path = "./47477739/fixed.rs"
+
+[[bin]]
+name = "47933532fixed"
+path = "./47933532/fixed.rs"
+
+[[bin]]
+name = "49077797fixed"
+path = "./49077797/fixed.rs"
+
+[[bin]]
+name = "49393139fixed"
+path = "./49393139/fixed.rs"
+
+[[bin]]
+name = "50090553fixed"
+path = "./50090553/fixed.rs"
+
+[[bin]]
+name = "51701393fixed"
+path = "./51701393/fixed.rs"
+
+# [[bin]]
+# name = "52718513fixed"
+# path = "./52718513/fixed.rs"
+
+# 74415939
+[[bin]]
+name = "74415939buggy"
+path = "./74415939/buggy.rs"
+
+[[bin]]
+name = "74415939fixed"
+path = "./74415939/fixed.rs"
+
+# 65545236
+[[bin]]
+name = "65545236buggy"
+path = "./65545236/buggy.rs"
+
+[[bin]]
+name = "65545236fixed"
+path = "./65545236/fixed.rs"
+
+[[bin]]
+name = "52838884fixed"
+path = "./52838884/fixed.rs"
+
+[[bin]]
+name = "56060983fixed"
+path = "./56060983/fixed.rs"
+
+[[bin]]
+name = "56061899fixed"
+path = "./56061899/fixed.rs"
+
+[[bin]]
+name = "56336526fixed"
+path = "./56336526/fixed.rs"
+
+# [[bin]]
+# name = "56620265fixed"
+# path = "./56620265/fixed.rs"
+
+[[bin]]
+name = "58043281fixed"
+path = "./58043281/fixed.rs"
+
+[[bin]]
+name = "58157680fixed"
+path = "./58157680/fixed.rs"
+
+[[bin]]
+name = "58207846fixed"
+path = "./58207846/fixed.rs"
+
+# [[bin]]
+# name = "58459643fixed"
+# path = "./58459643/fixed.rs"
+
+[[bin]]
+name = "58559969fixed"
+path = "./58559969/fixed.rs"
+
+[[bin]]
+name = "58683326fixed"
+path = "./58683326/fixed.rs"
+
+# [[bin]]
+# name = "59022234fixed"
+# path = "./59022234/fixed.rs"
+
+[[bin]]
+name = "60029939fixed"
+path = "./60029939/fixed.rs"
+
+# [[bin]]
+# name = "61043888fixed"
+# path = "./61043888/fixed.rs"
+
+[[bin]]
+name = "61061853fixed"
+path = "./61061853/fixed.rs"
+
+[[bin]]
+name = "61121260fixed"
+path = "./61121260/fixed.rs"
+
+[[bin]]
+name = "61297300fixed"
+path = "./61297300/fixed.rs"
+
+[[bin]]
+name = "61560298fixed"
+path = "./61560298/fixed.rs"
+
+[[bin]]
+name = "61665203fixed"
+path = "./61665203/fixed.rs"
+
+# original question is vague. bad quality.
+# [[bin]]
+# name = "62867170fixed"
+# path = "./62867170/fixed.rs"
+
+[[bin]]
+name = "63428868fixed"
+path = "./63428868/fixed.rs"
+
+[[bin]]
+name = "64040987fixed"
+path = "./64040987/fixed.rs"
+
+# not atomic enough. skipped.
+[[bin]]
+name = "64043682fixed"
+path = "./64043682/fixed.rs"
+
+[[bin]]
+name = "64528913fixed"
+path = "./64528913/fixed.rs"
+
+[[bin]]
+name = "64627891fixed"
+path = "./64627891/fixed.rs"
+
+[[bin]]
+name = "64782348fixed"
+path = "./64782348/fixed.rs"
+
+[[bin]]
+name = "64811159fixed"
+path = "./64811159/fixed.rs"
+
+[[bin]]
+name = "65173868fixed"
+path = "./65173868/fixed.rs"
+
+# [[bin]]
+# name = "65176970fixed"
+# path = "./65176970/fixed.rs"
+
+[[bin]]
+name = "66146029fixed"
+path = "./66146029/fixed.rs"
+
+# hard to make into a test.
+# [[bin]]
+# name = "66219238fixed"
+# path = "./66219238/fixed.rs"
+
+[[bin]]
+name = "66330144fixed"
+path = "./66330144/fixed.rs"
+
+[[bin]]
+name = "66411362fixed"
+path = "./66411362/fixed.rs"
+
+# cannot make it work.
+# [[bin]]
+# name = "66563380fixed"
+# path = "./66563380/fixed.rs"
+
+[[bin]]
+name = "68598464fixed"
+path = "./68598464/fixed.rs"
+
+[[bin]]
+name = "69405403fixed"
+path = "./69405403/fixed.rs"
+
+[[bin]]
+name = "70148904fixed"
+path = "./70148904/fixed.rs"
+
+[[bin]]
+name = "70439544fixed"
+path = "./70439544/fixed.rs"
+
+[[bin]]
+name = "70717050fixed"
+path = "./70717050/fixed.rs"
+
+[[bin]]
+name = "70768081fixed"
+path = "./70768081/fixed.rs"
+
+# 69059587
+[[bin]]
+name = "69059587buggy"
+path = "./69059587/buggy.rs"
+
+[[bin]]
+name = "69059587fixed"
+path = "./69059587/fixed.rs"
+
+[[bin]]
+name = "70768081-2fixed"
+path = "./70768081-2/fixed.rs"
+
+[[bin]]
+name = "70957110fixed"
+path = "./70957110/fixed.rs"
+
+# [[bin]]
+# name = "71379013fixed"
+# path = "./71379013/fixed.rs"
+
+# [[bin]]
+# name = "73064033fixed"
+# path = "./73064033/fixed.rs"
+
+[[bin]]
+name = "73402009fixed"
+path = "./73402009/fixed.rs"
+
+# long and hard to understand
+# [[bin]]
+# name = "73418068fixed"
+# path = "./73418068/fixed.rs"
+
+[[bin]]
+name = "73690343fixed"
+path = "./73690343/fixed.rs"
+
+[[bin]]
+name = "74416599fixed"
+path = "./74416599/fixed.rs"
+
+# original program rewrote; not good
+# [[bin]]
+# name = "74915201fixed"
+# path = "./74915201/fixed.rs"
+
+[[bin]]
+name = "75540948fixed"
+path = "./75540948/fixed.rs"
+
+# requires rewrite
+# [[bin]]
+# name = "75971564fixed"
+# path = "./75971564/fixed.rs"
+
+[[bin]]
+name = "77175152fixed"
+path = "./77175152/fixed.rs"
+
+[package]
+name = "dataset-05-15"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+rental = "0.5.4"
+owning_ref = "0.4.1"
+async-trait = "0.1.42"
+crossbeam = "0.8.0"
+lazy_static = "1.4.0"
+
+[dependencies.tokio]
+version = "0.3.5"
+features = [ "full",]
